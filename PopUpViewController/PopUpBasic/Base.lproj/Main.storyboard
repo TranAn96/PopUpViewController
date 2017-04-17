@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PopUpBasic" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="okk-q8-c8q">
+                                <rect key="frame" x="124.5" y="277.5" width="125" height="111"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="19"/>
+                                <state key="normal" title="ShowPopUp"/>
+                                <connections>
+                                    <action selector="showPopUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="35n-zw-pYb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="okk-q8-c8q" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1/3" id="HZK-fd-Ybv"/>
+                            <constraint firstItem="okk-q8-c8q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SfC-wd-ne3"/>
+                            <constraint firstItem="okk-q8-c8q" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Vkt-pr-nZu"/>
+                            <constraint firstItem="okk-q8-c8q" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1/6" id="fRd-jS-eKW"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Pop Up View Controller-->
+        <scene sceneID="Di1-Ve-bVC">
+            <objects>
+                <viewController storyboardIdentifier="PopUpView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sZY-l2-h9N" customClass="PopUpViewController" customModule="PopUpBasic" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XaR-YB-lCr"/>
+                        <viewControllerLayoutGuide type="bottom" id="IKR-qd-VgA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0QT-Ph-Rty">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xWS-dY-eVy">
+                                <rect key="frame" x="62.5" y="167" width="250" height="333.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="93I-Di-4Jz">
+                                        <rect key="frame" x="0.0" y="277.5" width="250" height="55.5"/>
+                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="20"/>
+                                        <state key="normal" title="Dismiss Me"/>
+                                        <connections>
+                                            <action selector="touchDismiss:" destination="sZY-l2-h9N" eventType="touchUpInside" id="mBT-7g-g69"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="93I-Di-4Jz" firstAttribute="leading" secondItem="xWS-dY-eVy" secondAttribute="leading" id="ELU-yY-4iE"/>
+                                    <constraint firstItem="93I-Di-4Jz" firstAttribute="height" secondItem="xWS-dY-eVy" secondAttribute="height" multiplier="1/6" id="JFF-ZD-4Lu"/>
+                                    <constraint firstAttribute="bottom" secondItem="93I-Di-4Jz" secondAttribute="bottom" id="yvT-x2-CQi"/>
+                                    <constraint firstAttribute="trailing" secondItem="93I-Di-4Jz" secondAttribute="trailing" id="z9j-dc-4cB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xWS-dY-eVy" firstAttribute="width" secondItem="0QT-Ph-Rty" secondAttribute="width" multiplier="2/3" id="Km7-FM-IZ6"/>
+                            <constraint firstItem="xWS-dY-eVy" firstAttribute="centerX" secondItem="0QT-Ph-Rty" secondAttribute="centerX" id="QDW-8q-ekr"/>
+                            <constraint firstItem="xWS-dY-eVy" firstAttribute="centerY" secondItem="0QT-Ph-Rty" secondAttribute="centerY" id="ecz-Vz-rIx"/>
+                            <constraint firstItem="xWS-dY-eVy" firstAttribute="height" secondItem="0QT-Ph-Rty" secondAttribute="height" multiplier="1/2" id="tuH-LF-hti"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sRt-xO-tvn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="855" y="36"/>
+        </scene>
+    </scenes>
+</document>
